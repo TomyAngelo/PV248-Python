@@ -201,7 +201,7 @@ def parseIncipit(line2):
     return line2
 
 def load(filename):
-    prints = {}
+    prints = []
     file = open(filename,'r')
 
     for line in file:
@@ -237,7 +237,7 @@ def load(filename):
             composition = Composition(title,incipit,key,genre,comYear,voices,composers)
             edition = Edition(composition,editors,atrEdition)
             classPrint = Print(edition,print_id,partiture)
-            prints[print_id] = classPrint
+            prints.append(classPrint)
     file.close()
     return prints
     
