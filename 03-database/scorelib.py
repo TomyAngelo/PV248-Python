@@ -108,6 +108,7 @@ class Person:
 
 def parseComposer(line2):
     line2 = re.sub( "Composer: " , '' , line2 ).strip()
+    if line2 == "": return []
     splitLine = line2.split( ';' )
     composersList = []
     for com in splitLine:
